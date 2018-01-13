@@ -1,5 +1,6 @@
-# This file and the /images2/ directory were created by github.com/ruin332
+# This file was created by github.com/ruin332
 # He is 100% boss
+# he knows de way
 
 from discord.ext import commands
 import discord
