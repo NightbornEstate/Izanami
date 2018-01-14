@@ -102,7 +102,7 @@ class DeWay:
 
         img_offset_x = img_center_x // 3
         img_offset_y = img_center_y // 3
-        im_scale = 2
+        im_scale = 1
         ava_right = im_scale * (img_offset_x + avatar_im.width//2)
         ava_bottom = im_scale * (img_offset_y + avatar_im.height//2)
         ava_left = (img_offset_x - avatar_im.width//2)
