@@ -146,7 +146,7 @@ class DeWay:
             rand_img = random.choice(files)
             pod = Image.open(rand_img)
             #pod = Image.eval(pod, lambda px: px // 2)
-            im.paste(pod, box=(ranx, rany), mask=120)
+            im.paste(pod, box=(ranx, rany), mask=pod.convert("RGBA"))
 
         draw.text((x, y), welcome, fill=text_color, font=font, align='center')
 
