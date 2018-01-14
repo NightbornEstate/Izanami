@@ -59,15 +59,15 @@ class DeWay:
         ov_top = (im.height // 2) + (blur_offset_y)
         ov_right = im.width
         ov_bottom = im.height
-        ov_box = (ov_left, ov_top, ov_right, ov_bottom)
+        #ov_box = (ov_left, ov_top, ov_right, ov_bottom)
 
-        ov_ic = im.crop(ov_box)
-        ov_ic = ov_ic.filter(ImageFilter.GaussianBlur(blur_radius))
+        #ov_ic = im.crop(ov_box)
+        #ov_ic = ov_ic.filter(ImageFilter.GaussianBlur(blur_radius))
 
-        im.paste(ov_ic, ov_box)
+        #im.paste(ov_ic, ov_box)
 
         draw = ImageDraw.Draw(im, mode='RGBA')
-        draw.rectangle(((ov_left, ov_top), (ov_right, ov_bottom)), fill=(0, 0, 0, 120))
+        #draw.rectangle(((ov_left, ov_top), (ov_right, ov_bottom)), fill=(0, 0, 0, 120))
 
         avatar_im = None
         url = member.avatar_url
