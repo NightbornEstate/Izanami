@@ -119,9 +119,10 @@ class DeWay:
             for coord in border_coords:
                 draw.text(coord, welcome, font=font, align='center', fill='black')
 
-        for x in [
+        for a in [
                 [600, 300, "show him de way"]]:
-            draw.text((x[0], x[1]), x[2], fill=random.choice(["white", "red"]), font=font, align="center")
+            draw.text( [a[0], a[1]] , a[2], fill=random.choice(["white", "red"]), font=font, align="center")
+
         draw.text((x, y), welcome, fill=text_color, font=font, align='center')
 
         temp = BytesIO()
