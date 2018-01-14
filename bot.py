@@ -25,6 +25,15 @@ def is_owner(ctx):
 
 @bot.command(pass_context=True)
 @commands.check(is_owner)
+async def grl(ctx):
+    """Gitreloads the bot"""
+    import os
+    os.system("git pull")
+    await bot.say("o/")
+    os.system("pm2 restart Izanami")
+
+@bot.command(pass_context=True)
+@commands.check(is_owner)
 async def wel(ctx):
   """Welcomes a member"""
   await bot.cogs['Welcome'].setup_welcome(ctx.message.author, ctx.message.channel.id)

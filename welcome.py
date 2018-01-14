@@ -42,7 +42,7 @@ class Welcome:
         top = (height - new_height) // 2
         right = (width + new_width) // 2
         bottom = (height + new_height) // 2
-        #im = im.crop((left, top, right, bottom)).convert("RGB")
+        im = im.crop((left, top, right, bottom)).convert("RGB")
 
         # how to set up a gradient from the bottom:
         # fade_from = new_height/4
