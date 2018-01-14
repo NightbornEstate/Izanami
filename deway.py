@@ -134,6 +134,19 @@ class DeWay:
         for a in quoteArray:
             draw.text( [a[0], a[1]] , a[2], fill=random.choice(["white", "red", "green", "yellow", "orange", "blue", "blue"]), font=sfont, align="right")
 
+        for i in range(4):
+            ranx = random.randint(0, 1400)
+            rany = random.randint(0, 1000)
+            files = glob.glob('{}/pods/*.png'.format(cwd))
+            files.extend(glob.glob('{}/pods/*.jpg'.format(cwd)))
+            #font = ImageFont.truetype('Comic Sans.ttf', 100)
+            # kwargs['ava_sqdim'] = 200
+            # kwargs['blur_offset_y'] = 100
+            rand_img = random.choice(files)
+            pod = Image.open(rand_img)
+            pod = Image.eval(pod, lambda px: px // 2)
+            im.paste(pod, box=(ranx, rany), mask=pod)
+
         draw.text((x, y), welcome, fill=text_color, font=font, align='center')
 
         temp = BytesIO()
