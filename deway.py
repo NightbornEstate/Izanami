@@ -134,6 +134,7 @@ class DeWay:
         for a in quoteArray:
             draw.text( [a[0], a[1]] , a[2], fill=random.choice(["white", "red", "green", "yellow", "orange", "blue", "blue"]), font=sfont, align="right")
 
+        cwd = os.getcwd()
         for i in range(4):
             ranx = random.randint(0, 1400)
             rany = random.randint(0, 1000)
