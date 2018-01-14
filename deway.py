@@ -113,8 +113,8 @@ class DeWay:
         y = ((img_center_y - text_height / 2) + text_offset_y)
 
         if outline:
-            border_coords = ((x-1, y), (x+1, y), (x, y-1), (x, y+1), (x-1, y-1),
-                             (x+1, y-1), (x-1, y+1), (x+1, y+1))
+            border_coords = ((x-10, y), (x+10, y), (x, y-10), (x, y+10), (x-10, y-10),
+                             (x+10, y-10), (x-10, y+10), (x+10, y+10))
 
             for coord in border_coords:
                 draw.text(coord, welcome, font=font, align='center', fill='black')
