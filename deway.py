@@ -119,6 +119,12 @@ class DeWay:
             for coord in border_coords:
                 draw.text(coord, welcome, font=font, align='center', fill='black')
 
+        [
+            draw.text((x[0], x[1]), x[2], fill=random.choice(["white", "red"], font=font, align="center")
+            for x in [
+                [600, 300, "show him de way"]
+            ]
+        ]
         draw.text((x, y), welcome, fill=text_color, font=font, align='center')
 
         temp = BytesIO()
@@ -140,7 +146,7 @@ class DeWay:
         if member.server.id == '300155035558346752':
             files = glob.glob('{}/images3/*.png'.format(cwd))
             files.extend(glob.glob('{}/images3/*.jpg'.format(cwd)))
-            font = ImageFont.truetype('Stranger back in the Night.ttf', 100)
+            font = ImageFont.truetype('Comic Sans.ttf', 200)
             # kwargs['ava_sqdim'] = 200
             # kwargs['blur_offset_y'] = 100
             rand_img = random.choice(files)
