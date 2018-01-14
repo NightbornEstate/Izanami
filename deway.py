@@ -100,13 +100,12 @@ class DeWay:
         img_center_x = (im.width // 2)
         img_center_y = (im.height // 2)
 
-        img_offset_x = img_center_x + offset_x
-        img_offset_y = img_center_y + offset_y
+        img_offset_x = img_center_x / 2
+        img_offset_y = img_center_y / 2
         ava_right = img_offset_x + avatar_im.width//2
         ava_bottom = img_offset_y + avatar_im.height//2
         ava_left = img_offset_x - avatar_im.width//2
         ava_top = img_offset_y - avatar_im.height//2
-
         im.paste(avatar_im, box=(ava_left, ava_top, ava_right, ava_bottom), mask=avatar_im)
 
         text_width, text_height = draw.textsize(welcome, font=font)
