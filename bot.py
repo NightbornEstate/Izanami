@@ -21,7 +21,7 @@ async def on_member_join(member):
     await bot.cogs['DeWay'].setup_welcome(member)
 
 def is_owner(ctx):
-    return ctx.message.author.id == "376684394456285198"
+    return ctx.message.author.id == "193053876692189184"
 
 @bot.command(pass_context=True)
 @commands.check(is_owner)
