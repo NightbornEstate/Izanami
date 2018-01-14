@@ -144,7 +144,7 @@ class DeWay:
         if member.server.id == '300155035558346752':
             files = glob.glob('{}/images3/*.png'.format(cwd))
             files.extend(glob.glob('{}/images3/*.jpg'.format(cwd)))
-            font = ImageFont.truetype('Comic Sans.ttf', 200)
+            font = ImageFont.truetype('Comic Sans.ttf', 100)
             # kwargs['ava_sqdim'] = 200
             # kwargs['blur_offset_y'] = 100
             rand_img = random.choice(files)
