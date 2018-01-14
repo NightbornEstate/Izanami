@@ -139,8 +139,8 @@ class DeWay:
                                 'blur_radius', 'blur_offset_y', 'outline'])
 
         if member.server.id == '300155035558346752':
-            files = glob.glob('{}/images2/*.png'.format(cwd))
-            files.extend(glob.glob('{}/images2/*.jpg'.format(cwd)))
+            files = glob.glob('{}/images3/*.png'.format(cwd))
+            files.extend(glob.glob('{}/images3/*.jpg'.format(cwd)))
             font = ImageFont.truetype('Stranger back in the Night.ttf', 100)
             # kwargs['ava_sqdim'] = 200
             # kwargs['blur_offset_y'] = 100
