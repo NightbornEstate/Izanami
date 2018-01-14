@@ -130,7 +130,7 @@ class DeWay:
             "welcome them my bruddas",
             "i found de wae"
         ]
-        quoteArray = [ [random.randint(0, 1000), random.randint(0, 700), q] for q in quotes ]
+        quoteArray = [ [random.randint(0, 1400), random.randint(0, 1000), q] for q in quotes ]
         for a in quoteArray:
             draw.text( [a[0], a[1]] , a[2], fill=random.choice(["white", "red", "green", "yellow", "orange", "blue", "blue"]), font=sfont, align="right")
 
