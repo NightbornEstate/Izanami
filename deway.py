@@ -118,11 +118,14 @@ class DeWay:
 
             for coord in border_coords:
                 draw.text(coord, welcome, font=font, align='center', fill='black')
-
+        
+        sfont = ImageFont.truetype('Comic Sans.ttf', 60)
         for a in [
-                [000, 300, "show him de way"],
-                [600, 430, "show my brother de way"]]:
-            draw.text( [a[0], a[1]] , a[2], fill=random.choice(["white", "red", "green", "yellow", "orange", "blue", "blue"]), font=font, align="right")
+                [random.randint(0, 1000), random.randint(0, 700), "show dem de way"],
+                [random.randint(0, 1000), random.randint(0, 700), "show my brother " + name + " de way"],
+                [random.randint(0, 1000), random.randint(0, 700), "he is one of us now"],
+                [random.randint(0, 1000), random.randint(0, 700), "does " + name + " know de way"]]:
+            draw.text( [a[0], a[1]] , a[2], fill=random.choice(["white", "red", "green", "yellow", "orange", "blue", "blue"]), font=sfont, align="right")
 
         draw.text((x, y), welcome, fill=text_color, font=font, align='center')
 
