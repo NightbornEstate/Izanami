@@ -1,5 +1,6 @@
 # This file was created by codingJWilliams
 
+import discord
 from discord.ext import commands
 
 description = '''Nightborn's welcomer bot'''
@@ -34,15 +35,19 @@ async def grl(ctx):
 
 @bot.command(pass_context=True)
 @commands.check(is_owner)
-async def wel(ctx):
+async def show_de_way(ctx, member: discord.Member = None, channel: discord.TextChannel = None):
+    member = member if member else ctx.message.author
+    channel = channel.id if channel else ctx.message.channel.id
   """Welcomes a member"""
-  await bot.cogs['Welcome'].setup_welcome(ctx.message.author, ctx.message.channel.id)
+  await bot.cogs['DeWay'].setup_welcome(member, channel)
 
 @bot.command(pass_context=True)
 @commands.check(is_owner)
-async def show_de_way(ctx):
+async def wel(ctx, member: discord.Member = None, channel: discord.TextChannel = None):
+    member = member if member else ctx.message.author
+    channel = channel.id if channel else ctx.message.channel.id
   """Welcomes a member"""
-  await bot.cogs['DeWay'].setup_welcome(ctx.message.author, ctx.message.channel.id)
+  await bot.cogs['Welcome'].setup_welcome(member, channel)
 
 @bot.command()
 @commands.check(is_owner)
