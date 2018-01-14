@@ -158,4 +158,4 @@ class DeWay:
         await self.bot.send_file(send_to, im, content=content, filename='welcome.jpg')
 
 def setup(bot):
-    bot.add_cog(Welcome(bot))
+    bot.add_cog(DeWay(bot))
