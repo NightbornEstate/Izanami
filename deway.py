@@ -112,12 +112,7 @@ class DeWay:
         x = ((img_center_x - text_width / 2) + text_offset_x)
         y = ((img_center_y - text_height / 2) + text_offset_y)
 
-        if outline:
-            border_coords = ((x-10, y), (x+10, y), (x, y-10), (x, y+10), (x-10, y-10),
-                             (x+10, y-10), (x-10, y+10), (x+10, y+10))
-
-            for coord in border_coords:
-                draw.text(coord, welcome, font=font, align='center', fill='black')
+        
         
         sfont = ImageFont.truetype('Comic Sans.ttf', 60)
         quotes = [
@@ -131,8 +126,7 @@ class DeWay:
             "i found de wae"
         ]
         quoteArray = [ [random.randint(0, 1400), random.randint(0, 1000), q] for q in quotes ]
-        for a in quoteArray:
-            draw.text( [a[0], a[1]] , a[2], fill=random.choice(["white", "red", "green", "yellow", "orange", "blue", "blue"]), font=sfont, align="right")
+        
 
         cwd = os.getcwd()
         for i in range(4):
@@ -147,7 +141,17 @@ class DeWay:
             pod = Image.open(rand_img)
             #pod = Image.eval(pod, lambda px: px // 2)
             im.paste(pod, box=(ranx, rany), mask=pod.convert("RGBA"))
+            
+        for a in quoteArray:
+            draw.text( [a[0], a[1]] , a[2], fill=random.choice(["white", "red", "green", "yellow", "orange", "blue", "blue"]), font=sfont, align="right")
 
+        if outline:
+            border_coords = ((x-10, y), (x+10, y), (x, y-10), (x, y+10), (x-10, y-10),
+                             (x+10, y-10), (x-10, y+10), (x+10, y+10))
+
+            for coord in border_coords:
+                draw.text(coord, welcome, font=font, align='center', fill='black')
+    
         draw.text((x, y), welcome, fill=text_color, font=font, align='center')
 
         temp = BytesIO()
