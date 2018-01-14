@@ -43,9 +43,9 @@ async def show_de_way(ctx, member: discord.Member = None, channel: discord.TextC
 
 @bot.command(pass_context=True)
 @commands.check(is_owner)
-async def wel(ctx, member: discord.Member = None, channel: discord.TextChannel = None):
+async def wel(ctx, member: discord.Member = None, channel = None):
   member = member if member else ctx.message.author
-  channel = channel.id if channel else ctx.message.channel.id
+  channel = channel if channel else ctx.message.channel.id
   """Welcomes a member"""
   await bot.cogs['Welcome'].setup_welcome(member, channel)
 
