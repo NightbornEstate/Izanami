@@ -5,7 +5,7 @@ from discord.ext import commands
 description = '''Nightborn's welcomer bot'''
 
 # this specifies what extensions to load when the bot starts up
-startup_extensions = ["welcome"]
+startup_extensions = ["welcome", "deway"]
 
 bot = commands.Bot(command_prefix='.', description=description)
 
@@ -37,6 +37,12 @@ async def grl(ctx):
 async def wel(ctx):
   """Welcomes a member"""
   await bot.cogs['Welcome'].setup_welcome(ctx.message.author, ctx.message.channel.id)
+
+@bot.command(pass_context=True)
+@commands.check(is_owner)
+async def show_de_way(ctx):
+  """Welcomes a member"""
+  await bot.cogs['DeWay'].setup_welcome(ctx.message.author, ctx.message.channel.id)
 
 @bot.command()
 @commands.check(is_owner)
