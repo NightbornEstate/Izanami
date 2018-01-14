@@ -97,8 +97,8 @@ class DeWay:
             mask = mask.resize(avatar_im.size, Image.ANTIALIAS)
             avatar_im.putalpha(mask)
 
-        img_center_x = (im.width)
-        img_center_y = (im.height)
+        img_center_x = avatar_im.width
+        img_center_y = avatar_im.height
         im_scale = 1
         img_offset_x = (img_center_x)
         img_offset_y = (img_center_y)
