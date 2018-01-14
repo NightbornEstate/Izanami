@@ -120,8 +120,9 @@ class DeWay:
                 draw.text(coord, welcome, font=font, align='center', fill='black')
 
         for a in [
-                [600, 300, "show him de way"]]:
-            draw.text( [a[0], a[1]] , a[2], fill=random.choice(["white", "red"]), font=font, align="center")
+                [000, 300, "show him de way"],
+                [600, 430, "show my brother de way"]]:
+            draw.text( [a[0], a[1]] , a[2], fill=random.choice(["white", "red", "green", "yellow", "orange", "blue", "blue"]), font=font, align="right")
 
         draw.text((x, y), welcome, fill=text_color, font=font, align='center')
 
