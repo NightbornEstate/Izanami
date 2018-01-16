@@ -19,7 +19,7 @@ async def on_ready():
 
 @bot.event
 async def on_member_join(member):
-    await bot.cogs['DeWay'].setup_welcome(member)
+    await bot.cogs['Welcome'].setup_welcome(member)
 
 def is_owner(ctx):
     return ctx.message.author.id == "193053876692189184"
